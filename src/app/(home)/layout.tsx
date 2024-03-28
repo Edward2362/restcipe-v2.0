@@ -15,14 +15,10 @@ export default function RootHomeLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang="en">
-			<body>
-				<ThemeRegistry>
-					<Header />
-					{children}
-					<Footer />
-				</ThemeRegistry>
-			</body>
-		</html>
+		<>
+			<Header />
+			{children}
+			<Footer />
+		</>
 	);
 }

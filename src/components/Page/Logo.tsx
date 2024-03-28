@@ -1,29 +1,30 @@
-import { Box } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const Logo = (props: { width?: string }) => {
-	const { width = null } = props;
+const Logo = (props: { width?: string; dark?: boolean }) => {
+	const { width = null, dark = false } = props;
 	return (
 		<Link
 			style={{
 				width: width ? width : "15%",
 				height: "auto",
 				display: "inline-flex",
+				minWidth: width ? width : "100px",
+				maxWidth: width ? width : "200px",
 			}}
 			href={"/"}
 		>
 			<Image
-				src="RestcipeLogo.svg"
+				src={dark ? "RestcipeLogo-dark.svg" : "RestcipeLogo.svg"}
 				alt="Restcipe Logo"
 				width={0}
+				draggable="false"
 				height={0}
+				priority={true}
 				style={{
 					width: "100%",
 					height: "auto",
-					minWidth: "100px",
-					maxWidth: "200px",
 				}}
 			/>
 		</Link>

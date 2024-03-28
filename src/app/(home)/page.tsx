@@ -1,11 +1,12 @@
 import Image from "next/image";
-import { Box, Typography } from "@mui/material";
+import { Box, TextField, Typography } from "@mui/material";
 import Section from "@/components/Page/Home/Section";
 import RecipeTicket from "@/components/RestcipeTicket/RecipeTicket";
 import Instructions from "@/components/Page/Home/Instructions";
 import Illustrations from "@/components/Page/Home/Illustrations";
 import KeyboardArrowRightRoundedIcon from "@mui/icons-material/KeyboardArrowRightRounded";
 import MagicCounter from "@/components/Page/Home/MagicCounter";
+import { grandifloraOne } from "@/theme/font";
 
 export default function Home() {
 	return (
@@ -17,36 +18,38 @@ export default function Home() {
 				decorations={[
 					<Image
 						key={"deco-1"}
-						src="/onion.png"
+						src="/onion.svg"
 						alt="Onion"
 						width={0}
 						height={0}
+						priority={true}
 						unoptimized
 						style={{
 							position: "absolute",
-							width: "20%",
+							width: "15%",
 							height: "auto",
-							zIndex: 1,
+							zIndex: 2,
 							bottom: 0,
 							left: 0,
-							transform: "translate(-45%, 45%)",
+							transform: "translate(0, 30%)",
 						}}
 					/>,
 					<Image
 						key={"deco-2"}
-						src="/broccoli.png"
-						alt="Onion"
+						src="/cabbage.svg"
+						alt="Cabbage"
 						width={0}
 						height={0}
+						priority={true}
 						unoptimized
 						style={{
 							position: "absolute",
-							width: "20%",
+							width: "15%",
 							height: "auto",
-							zIndex: 1,
+							zIndex: 2,
 							bottom: 0,
 							right: 0,
-							transform: "translate(45%, 45%)",
+							transform: "translate(20%, 45%)",
 						}}
 					/>,
 				]}
@@ -66,9 +69,9 @@ export default function Home() {
 						Open the fridge and
 					</Typography>
 					<Typography
-						variant="h1"
 						color="primary"
-						fontSize={{ xl: "12rem" }}
+						fontFamily={grandifloraOne.style.fontFamily}
+						fontSize={{ lg: "7rem", xl: "12rem" }}
 					>
 						Restcipe
 					</Typography>
@@ -215,7 +218,7 @@ export default function Home() {
 							position: "absolute",
 							width: "30%",
 							height: "auto",
-							zIndex: 1,
+							zIndex: 2,
 							margin: "auto 0",
 							left: 0,
 							top: 0,
@@ -234,7 +237,7 @@ export default function Home() {
 							position: "absolute",
 							width: "20%",
 							height: "auto",
-							zIndex: 1,
+							zIndex: 2,
 							margin: "auto 0",
 							left: 0,
 							top: 0,
@@ -252,7 +255,7 @@ export default function Home() {
 							position: "absolute",
 							width: "20%",
 							height: "auto",
-							zIndex: 1,
+							zIndex: 2,
 							margin: "auto 0",
 							right: 0,
 							bottom: 0,
@@ -270,7 +273,7 @@ export default function Home() {
 							position: "absolute",
 							width: "30%",
 							height: "auto",
-							zIndex: 1,
+							zIndex: 2,
 							margin: "auto 0",
 							right: 0,
 							top: 0,

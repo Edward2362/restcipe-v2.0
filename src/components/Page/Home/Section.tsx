@@ -27,11 +27,11 @@ const Section = (props: {
 					backgroundColor: "#FBFBFB",
 				},
 				fill && { height: "100vh", minHeight: "633px" },
-				overlay && {
-					backgroundImage: "url(HomeBg.png)",
-					backgroundSize: "cover",
-					backgroundPosition: "center center",
-				},
+				// overlay && {
+				// 	backgroundImage: "url(HomeBg.png)",
+				// 	backgroundSize: "cover",
+				// 	backgroundPosition: "center center",
+				// },
 			]}
 		>
 			{decorations}
@@ -39,6 +39,8 @@ const Section = (props: {
 				sx={{
 					width: 1,
 					height: 1,
+					zIndex: 1,
+					position: "relative",
 					px: "15%",
 					backgroundImage:
 						"linear-gradient(rgba(251, 251, 251, 0.7), rgba(251, 251, 251, 1), rgba(251, 251, 251, 1))",
@@ -47,6 +49,15 @@ const Section = (props: {
 			>
 				{children}
 			</Box>
+			{overlay && (
+				<Image
+					alt="Background"
+					style={{ zIndex: 0 }}
+					priority={true}
+					src="/HomeBg.png"
+					fill={true}
+				/>
+			)}
 		</Box>
 	);
 };

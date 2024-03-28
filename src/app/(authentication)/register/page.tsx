@@ -1,4 +1,5 @@
 import LoginForm from "@/components/Form/LoginForm";
+import RegisterForm from "@/components/Form/RegisterForm";
 import GoogleIcon from "@/components/Icon/GoogleIcon";
 import { Box, Button, Divider, Typography } from "@mui/material";
 import React from "react";
@@ -16,7 +17,7 @@ const Login = () => {
 			}}
 		>
 			<Typography fontWeight={700} fontSize={"2rem"}>
-				Sign In
+				Sign Up
 			</Typography>
 			<Box sx={{ padding: "2% 20%", width: 1 }}>
 				<Button
@@ -25,7 +26,7 @@ const Login = () => {
 					variant="contained"
 					startIcon={<GoogleIcon />}
 				>
-					Log in with Google
+					Register with Google
 				</Button>
 				<Divider
 					component="div"
@@ -42,7 +43,7 @@ const Login = () => {
 						OR LOGIN WITH EMAIL
 					</Typography>
 				</Divider>
-				<LoginForm />
+				<RegisterForm />
 			</Box>
 		</Box>
 	);

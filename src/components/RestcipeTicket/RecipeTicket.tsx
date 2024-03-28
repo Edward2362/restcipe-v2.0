@@ -35,6 +35,7 @@ const RecipeTicket = (props: {
 				alt="Pin"
 				width={0}
 				height={0}
+				priority={true}
 				style={{
 					position: "absolute",
 					width: "20%",
@@ -87,6 +88,7 @@ const RecipeTicket = (props: {
 						alt="dish picture"
 						width={0}
 						height={0}
+						priority={true}
 						style={{
 							width: "100%",
 							height: "100%",
